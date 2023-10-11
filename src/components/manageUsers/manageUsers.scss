@@ -1,0 +1,65 @@
+.manage-users-main {
+    .add-user-button {
+        background-color: rgba(142, 68, 173, 0.1490196078);
+        color: #8e44ad;
+        font-size: 15px;
+        font-weight: 600 !important;
+        border: none;
+        border-radius: 21px;
+        padding: 6px 18px;
+        height: auto;
+        margin-top: 10px;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #8e44ad;
+            color: #fff;
+        }
+    }
+
+    .inset-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        @media (max-width: 768px) {
+            flex-direction: column-reverse;
+            gap: 20px;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+        }
+
+        .search-wrapper {
+            background-color: rgb(255, 255, 255);
+            width: 250px;
+        }
+    }
+
+    .wrapper-users-table {
+        margin-top: 40px;
+    }
+
+}
+
+.add-user-form-wrapper {
+    margin-top: 20px;
+    max-height: 50vh;
+    overflow: scroll;
+    padding: 5px;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #e3e3e3;
+        border-radius: 20px;
+    }
+}
+
+.ant-select-item-option-selected {
+    background-color: #f4f4f4 !important;
+}
