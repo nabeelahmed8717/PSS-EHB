@@ -57,11 +57,14 @@ const MainLayout = () => {
                         <SideBar />
                     </Col>
                 }
-                <Col xs={24} sm={24} md={18} lg={20}>
+                <Col xs={24} sm={24} md={18} lg={20} >
                     <NavBar />
+                    <div className="wrapper-after-outlet">
                     <div className="wrapper-layout-outlet">
                         <Outlet />
                     </div>
+                    </div>
+                    
                 </Col>
             </Row>
 
@@ -69,7 +72,7 @@ const MainLayout = () => {
             {/* <div style={{ paddingBottom: `${isMobile ? '60px' : '0px'}` }}>
                 
             </div> */}
-            {
+            {/* {
                 isMobile &&
                 <>
                     <div className='bottom-nav-bar'>
@@ -95,7 +98,7 @@ const MainLayout = () => {
                         </div>
                     </div>
                 </>
-            }
+            } */}
 
         </>
     )

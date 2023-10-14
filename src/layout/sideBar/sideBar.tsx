@@ -17,7 +17,7 @@ import marketingIcon from "../../assets/icons/marketing.svg"
 import analysisIcon from "../../assets/icons/analysis.svg"
 import guideIcon from "../../assets/icons/memo-pad.svg"
 import manageUsersIcon from "../../assets/icons/user-gear.svg"
-import userQuriesIcon from "../../assets/icons/question-square.svg"
+import profileIcon from "../../assets/icons/user.svg"
 
 import {
   PieChartOutlined,
@@ -49,26 +49,24 @@ const SideBar = () => {
 
   const items: MenuItem[] = [
     getItem(<div onClick={() => navigate('./home')}>Dashboard</div>, '1', <PieChartOutlined />),
-    getItem(<div onClick={() => navigate('./manage-profile')}>Manage Profile</div>, '6', <img src={settingsIcon} width={15} height={15} alt="" />),
+    getItem(<div onClick={() => navigate('./user-Profile')}>Manage Profile</div>, '2', <img src={profileIcon} width={15} height={15} alt="" />),
+    getItem(<div onClick={() => navigate('./upload-kyc')}>Upload KYC</div>, '3', <img src={profileIcon} width={15} height={15} alt="" />),
     getItem(<div onClick={() => navigate('./packages')} >Packages</div>, '7', <img src={packagesIcon} width={15} height={15} alt="" />),
-    getItem(<div onClick={() => navigate('./marketing')}>Marketing</div>, '8', <img src={marketingIcon} width={15} height={15} alt="" />),
-    getItem(<div onClick={() => navigate('./manage-users')}>Manage Users</div>, '9', <img src={manageUsersIcon} width={15} height={15} alt="" />),
-    getItem(<div onClick={() => navigate('./users-quries')}>User Quries</div>, '10', <img src={userQuriesIcon} width={15} height={15} alt="" />),
     getItem(<div>Reports</div>, '11', <img src={analysisIcon} width={15} height={15} alt="" />),
     getItem(<div>User Guides</div>, '12', <img src={guideIcon} width={15} height={15} alt="" />),
   ];
 
   return (
     <div className='main-sidebar-wrapper'>
-      <div className="logo-main-area">
-        <h3>EHB</h3>
-        <p>EHB Franchises</p>
+      <div className="logo-main-area" style={{ color: "#fff" }}>
+        <h3>PSS</h3>
+        <p>Personal Security Service</p>
       </div>
       <div className="user-utils-wrapper">
-        <div className="user-utils-main-inner">
+        {/* <div className="user-utils-main-inner">
           <Avatar size={64} icon={<UserOutlined />} />
           <h3>Apex Limited</h3>
-        </div>
+        </div> */}
 
         <Menu
           defaultSelectedKeys={['1']}

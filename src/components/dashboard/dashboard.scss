@@ -5,169 +5,182 @@
     padding: 20px;
   }
 
-
-  .info-main-cards-f {
+  .user-profile-overview-card {
+    background-color: #8E44AD;
     width: 100%;
-    height: 120px;
-    border-radius: 15px;
-    padding: 10px;
+    border-radius: 20px;
+    padding: 20px;
 
-    .wrp-icon {
-      background-color: black;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+    h2 {
+      color: #ffffff;
+    }
+
+    .user-info-wrapper {
+      margin-top: 15px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 10px;
+      color: #ffffff;
 
-      img {
-        filter: invert(1) brightness(0.9);
+      h5 {
+        font-size: 20px;
       }
-    }
 
-    h3 {
-      font-size: 12px;
-      color: #828282;
-      margin-top: 5px;
-    }
-
-    p {
-      font-size: 20px;
-      font-weight: 800;
-    }
-  }
-
-  .wrapper-current-package{
-    background-color: #e7e7e959;
-    width: 100%;
-    // height: 100px;
-    border-radius: 15px;
-    padding: 20px;
-    margin-top: 30px;
-    h3{
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .package-details{
-.package-upgrade-btn{
-  background-color: #8e44ad26;
-  color: #8e44ad;
-  font-size: 12px;
-  font-weight: 600 !important;
-  border: none;
-  border-radius: 21px;
-  padding: 5px 14px;
-  height: auto;
-  margin-top: 10px;
-  transition: 0.3s;
-  &:hover{
-    background-color: #8e44ad;
-    color: #ffffff;
-  }
-}
-    }
-  }
-
-  .container-earnings {
-    background-color: #000;
-    width: 100%;
-    // height: 120px;
-    border-radius: 15px;
-    padding: 20px;
-    color: #ffffff;
-    margin-bottom: 30px;
-    // display: flex;
-    // align-items: center;
-    // gap: 20px;
-
-    .earning-icon {
-      background: rgb(36, 36, 36);
-      background: linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(239, 239, 239, 1) 100%);
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .icon-inner {
-        background-color: #000000;
-        width: 60px;
-        height: 60px;
+      .edit-btn {
+        background-color: #ffffff1c;
+        border: none;
+        width: 40px;
+        height: 40px;
+        padding: 0;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
 
         img {
-          filter: invert(1) brightness(0.9);
+          filter: invert(1) brightness(100);
         }
-      }
 
-    }
+        &:hover {
+          background-color: #ffffff;
 
-    .wrapper-md-er {
-
-      // display: flex;
-      // align-items: center;
-      // justify-content: space-between;
-      // flex-wrap: wrap;
-      .earning-content {
-        p {
-          margin-bottom: 5px;
+          img {
+            filter: none;
+          }
         }
-      }
-
-      .nav-wallet-btn {
-        background-color: #ffffff;
-        color: #000;
-        padding: 0px 33px;
-        width: 100%;
       }
     }
 
+    .oth-info {
+      background-color: #0000002b;
+      width: fit-content;
+      padding: 14px;
+      border-radius: 12px;
+      margin-top: 10px;
+
+      .gripper-list {
+        color: #ffffffcf;
+        display: flex;
+
+        p {}
+
+        .label-hd {
+          font-weight: 500;
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  .quick-apply {
+    margin-top: 30px;
+
+    h3 {
+      
+    }
+
+    .apply-card-wrapper {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+
+      .apply-card-bx {
+        width: 150px;
+        height: 200px;
+        border-radius: 10px;
+        padding: 15px;
+        padding-bottom: 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        .apply-icon {
+          background-color: #efefef;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .heading-apply {
+          text-align: center;
+
+          p {
+            font-size: 10px;
+            color: #828282;
+          }
+
+          h5 {
+            font-size: 16px;
+        color: #8E44AD;
+          }
+        }
+
+        .apply-btn {
+          background-color: #8e44ad24;
+          color: #8E44AD;
+          border: none;
+          border-radius: 30px;
+          height: 37px;
+          padding: 0;
+          width: 100%;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: #8E44AD;
+            color: #ffffff;
+          }
+        }
+      }
+    }
 
   }
 
-  .wrapper-gripper-bonuses-overview-cd {
+  .info-services-tasks {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 50vh;
+    border-radius: 20px;
+    padding: 20px;
 
-    h3 {
-      font-size: 18px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    .wrapper-todos {
+      padding-top: 20px;
 
-    .wgbo-set-inner {
-      background-color: #ffffff;
-      width: 100%;
-      height: 200px;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-      border-radius: 15px;
-      margin-top: 10px;
-      padding: 20px;
-    }
+      .card-todos {
+        background-color: #ffffff;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin-top: 10px;
 
-    .info-bonuses-flex {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #e7e7e9;
-      padding: 4px 0px;
-      p {
-        font-size: 15px;
-      }
-      h3 {
-        font-size: 15px;
-        color: gray;
+        .left-ar {
+          display: flex;
+          align-items: center;
+          gap: 10px;
 
-        span {
-          color: #27ae60;
+          p {
+            span {
+              color: #8d44ad93;
+              margin-left: 10px;
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
         }
-      }
-      &:last-child{
-        border-bottom: 1px solid #ffffff00;
+
+        .right-ar {
+          font-weight: 500;
+          color: #8E44AD;
+          cursor: pointer;
+        }
       }
     }
   }

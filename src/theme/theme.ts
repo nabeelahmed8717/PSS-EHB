@@ -1,7 +1,7 @@
 export const theme = {
   token: {
     // colorPrimary: "#2F87EF",
-    colorPrimary: "#003171",
+    colorPrimary: "#8E44AD",
     fontFamily: "Poppins,sans-serif",
     // colorInfo: "#1890FF",
     // colorError: "#FF4D4F",

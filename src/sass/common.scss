@@ -427,7 +427,8 @@ input {
     color: #fff !important;
   }
 }
-.global-btn-cancel{
+
+.global-btn-cancel {
   background-color: rgba(191, 191, 191, 0.149);
   color: #000000 !important;
   font-size: 14px;
@@ -571,6 +572,12 @@ input {
     border-radius: 30px;
     border: none;
   }
+  .info-hd-badge {
+    background-color: #8e44ad26;
+  color: #8e44ad;
+    border-radius: 30px;
+    border: none;
+  }
 }
 
 .b--white-icon {
@@ -617,6 +624,36 @@ input {
   text-overflow: ellipsis;
 }
 
+.common-btn-shd {
+  background-color: #8e44ad26;
+  color: #8e44ad;
+  width: fit-content;
+  height: fit-content;
+  padding: 7px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  &:hover{
+    background-color: #8e44ad;
+  color: #ffffff;
+  }
+}
+.common-btn {
+  background-color: #8e44ad;
+  color: #ffffff;
+  width: fit-content;
+  height: fit-content;
+  padding: 7px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  &:hover{
+    background-color: #6d3087;
+  color: #ffffff;
+  }
+}
 
 .global-form {
   .ant-input {
@@ -650,7 +687,7 @@ input {
     background-color: #e7e7e7 !important;
   }
 
-  
+
 
   .ant-form-item .ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
     display: none;

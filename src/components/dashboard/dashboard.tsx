@@ -1,16 +1,34 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./dashboard.scss"
-import { Button, Col, Row } from 'antd'
+import { Avatar, Button, Col, Row } from 'antd'
 
-import storesIcon from "../../assets/icons/store-alt.svg"
-import wifiIcon from "../../assets/icons/wifi-alt.svg"
-import riderIcon from "../../assets/icons/biking-mountain.svg"
-import starIcon from "../../assets/icons/star-outlined.svg"
-import dollarSign from "../../assets/icons/dollarSign.svg"
-import arrowUpRight from "../../assets/icons/arrow-up-right.svg"
+import editIcon from "../../assets/icons/edit-pencil.svg"
+
+import docsIcon from "../../assets/images/docs.png"
+import warningIcon from "../../assets/images/warning.png"
+
+import motorbikeIcon from "../../assets/images/motorbike.png"
+import shopsIcon from "../../assets/images/shops.png"
 
 
+const applyJobsData = [
+  {
+    jobTitle: "Rider",
+    icon: motorbikeIcon,
+    link: "../"
+  },
+  {
+    jobTitle: "Store Reg.",
+    icon: shopsIcon,
+    link: "../"
+  },
+  {
+    jobTitle: "Franchise Reg.",
+    icon: shopsIcon,
+    link: "../"
+  },
+]
 
 const Dashboard = () => {
   const navigate = useNavigate()
@@ -34,131 +52,86 @@ const Dashboard = () => {
     <div className="dashboard-main-wrapper">
       <div className="common-head-wrapper-title">
         <div style={{ display: 'flex', justifyContent: "space-between" }}>
-          <h3>Franchise Dashboard</h3>
-          {/* <div className='head-ins'>
-            <Button className='service-quality'>SQ-level : <strong>High</strong></Button>
-          </div> */}
+          <h3>Dashboard</h3>
+          <div className='head-ins'>
+            <Button className='service-quality'>PSS-SQ-level : <strong>High</strong></Button>
+          </div>
         </div>
 
       </div>
-
       <br />
-      <br />
-      <br />
-      <Row gutter={30}>
-        <Col lg={6} md={24} sm={24} xs={24}>
-          <Row gutter={[10, 10]}>
-            <Col lg={12} md={6} sm={6} xs={12}>
-              <div className="info-main-cards-f" style={{ backgroundColor: "#F0F4FF" }}>
-                <div className='wrp-icon'><img src={storesIcon} width={19} height={19} alt="" /></div>
-                <h3>Registered stores</h3>
-                <p>348</p>
-              </div>
-            </Col>
-            <Col lg={12} md={6} sm={6} xs={12}>
-              <div className="info-main-cards-f" style={{ backgroundColor: "#FAF8F3" }}>
-                <div className='wrp-icon'><img src={wifiIcon} width={19} height={19} alt="" /></div>
-                <h3>Active Stores</h3>
-                <p>324</p>
-              </div>
-            </Col>
-            <Col lg={12} md={6} sm={6} xs={12}>
-              <div className="info-main-cards-f" style={{ backgroundColor: "#EEFCEF" }}>
-                <div className='wrp-icon'><img src={riderIcon} width={19} height={19} alt="" /></div>
-                <h3>Active Riders</h3>
-                <p>200</p>
-              </div>
-            </Col>
-            <Col lg={12} md={6} sm={6} xs={12}>
-              <div className="info-main-cards-f" style={{ backgroundColor: "#E5F5FA" }}>
-                <div className='wrp-icon'><img src={starIcon} width={19} height={19} alt="" /></div>
-                <h3>Ratings</h3>
-                <p>3.4</p>
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col span={24}>
-            <div className="wrapper-current-package">
-              <h3>Current Package</h3>
-              <div className="package-details">
-                <h3>Level 2</h3>
-                <p>Price : <span>$ 2,000</span></p>
-              <Button className='package-upgrade-btn'>Upgrade</Button>
-              </div>
+      <Row gutter={[20, 20]}>
+        <Col sm={24} md={24} lg={12}>
+          <div className="user-profile-overview-card">
+            <h2>Profile</h2>
+            <div className="user-info-wrapper">
+              <Avatar size={55} icon={<img src="https://cdn.icon-icons.com/icons2/2630/PNG/512/avatar_man_beard_brown_hair_boy_people_icon_159121.png" alt="" />} />
+              <h3>Jhon Doe</h3>
+              <Button className='edit-btn'><img src={editIcon} width={20} height={20} alt="" /></Button>
             </div>
-            </Col>
-          </Row>
-        </Col>
-        <Col lg={18} md={24} sm={24} xs={24}>
-          <div className="container-earnings">
-            <Row gutter={[0, 10]}>
-              <Col lg={4} md={4} sm={24} xs={24}>
-                <div className="earning-icon">
-                  <div className="icon-inner">
-                    <img src={dollarSign} width={22} height={22} alt="" />
-                  </div>
-                </div>
-              </Col>
-              <Col lg={20} md={20} sm={24} xs={24}>
-                <div className='wrapper-md-er'>
-                  <Row gutter={[0, 10]}>
-                    <Col lg={18} md={18} sm={24} xs={24}>
-                      <div className='earning-content'>
-                        <p>Your this month Earnings</p>
-                        <h2>& <span>2,647.34</span></h2>
-                      </div>
-                    </Col>
-                    <Col lg={6} md={6} sm={24} xs={24}>
-                      <Button className='nav-wallet-btn'>Go to Wallet</Button>
-                    </Col>
-                  </Row>
-                </div>
-              </Col>
-            </Row>
+            <div className="oth-info">
+              <div className="gripper-list"><p className='label-hd'>Email</p><p>jhon.doe@mail.com</p></div>
+              <div className="gripper-list"><p className='label-hd'>Phone</p><p>000 000000 0</p></div>
+            </div>
+          </div>
 
+          <div className="quick-apply">
+            <h3>Quick Apply</h3>
+
+            <div className="apply-card-wrapper">
+              {
+                applyJobsData.map((item) => (
+                  <div className="apply-card-bx">
+                    <div className="apply-icon">
+                      <img src={item.icon} width={30} height={30} alt="" />
+                    </div>
+                    <div className='heading-apply'>
+                      <p>Apply for</p>
+                      <h5>{item.jobTitle}</h5>
+                    </div>
+                    <Button className='apply-btn'>Apply</Button>
+                  </div>
+                ))
+              }
+
+
+            </div>
 
           </div>
 
-          <Row gutter={[20,20]}>
-            <Col lg={12} md={24} sm={24} xs={24}>
-              <div className="wrapper-gripper-bonuses-overview-cd">
-                <h3>Level Bonus <img src={arrowUpRight} width={15} height={20} alt="" /></h3>
-                <div className="wgbo-set-inner">
-                  <div className="info-bonuses-flex">
-                    <p>Wobble Store Created</p>
-                    <h3><span>5%</span> ~ <span>0.4$</span> </h3>
-                  </div>
-                  <div className="info-bonuses-flex">
-                    <p>Premium Gucci shirt sold</p>
-                    <h3><span>3%</span> ~ <span>0.3$</span> </h3>
-                  </div>
-                  <div className="info-bonuses-flex">
-                    <p>Free-Range Eggs (1 dozen) sold</p>
-                    <h3><span>3%</span> ~ <span>1.00$</span> </h3>
-                  </div>
-                  <div className="info-bonuses-flex">
-                    <p>Premium Gucci shirt sold</p>
-                    <h3><span>3%</span> ~ <span>0.3$</span> </h3>
-                  </div>
+        </Col>
+        <Col sm={24} md={24} lg={12}>
+          <div className="info-services-tasks">
+            <h3>Todos</h3>
+            <div className="wrapper-todos">
+              <div className="card-todos">
+                <div className="left-ar">
+                  <img src={docsIcon} width={20} height={20} alt="" />
+                  <p>Upload PSS KYC <span><em>Required</em></span> </p>
+                </div>
+                <div className="right-ar">
+                  Click Here
                 </div>
               </div>
-            </Col>
-            <Col lg={12} md={24} sm={24} xs={24}>
-              <div className="wrapper-gripper-bonuses-overview-cd">
-                <h3>Direct Bonus <img src={arrowUpRight} width={15} height={20} alt="" /></h3>
-                <div className="wgbo-set-inner">
-                  <div className="info-bonuses-flex">
-                    <p>20 Franchise sold</p>
-                    <h3><span>5%</span> ~ <span>2000$</span> </h3>
-                  </div>
+              <div className="card-todos">
+                <div className="left-ar">
+                  <img src={warningIcon} width={20} height={20} alt="" />
+                  <p>Complete Personal Information <span><em>Required</em></span> </p>
+                </div>
+                <div className="right-ar">
+                  Click Here
                 </div>
               </div>
-            </Col>
-          </Row>
-          
+            </div>
+          </div>
         </Col>
       </Row>
+
+
+      <br />
+      <br />
+      <br />
+
     </div>
   )
 }

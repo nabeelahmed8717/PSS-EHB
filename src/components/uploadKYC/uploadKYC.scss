@@ -1,0 +1,30 @@
+.upload-kyc-main-wrapper {
+    .upload-wrapper-cont {
+        background-color: #eee3f38a;
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px 0px;
+        border: 2px solid #8e44ad;
+        border-style: dashed;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .head {
+            h3 {
+                text-align: center;
+                color: #8e44ad;
+                font-size: 22px;
+            }
+
+            h5 {
+                text-align: center;
+                color: #8e44ad;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+}

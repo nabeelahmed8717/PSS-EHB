@@ -30,15 +30,12 @@ const MainLayout = Loadable(lazy(() => import("./layout/mainLayout")));
 const LandingPage = Loadable(lazy(() => import("./pages/dashboard")));
 const SignIn = Loadable(lazy(() => import("./pages/signIn")));
 const SignUp = Loadable(lazy(() => import("./pages/signUp")));
-const Chat = Loadable(lazy(() => import("./pages/chat")));
 
 
-
-const ManageProfile = Loadable(lazy(() => import("./pages/manageProfile")));
 const Packages = Loadable(lazy(() => import("./pages/sqPackages")));
-const ManageUsers = Loadable(lazy(() => import("./pages/manageUsers")));
+const UserProfile = Loadable(lazy(() => import("./pages/userProfile")));
+const UploadKYC = Loadable(lazy(() => import("./pages/uploadKYC")));
 
-const Marketing = Loadable(lazy(() => import("./pages/marketing")));
 
 
 export const routes: any = [
@@ -60,25 +57,17 @@ export const routes: any = [
         element: <LandingPage />,
       },
       {
-        path: "chat",
-        element: <Chat />,
-      },
-      {
-        path: "manage-profile",
-        element: <ManageProfile />,
-      },
-      {
         path: "packages",
         element: <Packages />,
       },
       {
-        path: "manage-users",
-        element: <ManageUsers />,
+        path: "user-Profile",
+        element: <UserProfile />,
       },
       {
-        path: "marketing",
-        element: <Marketing />,
-      }
+        path: "upload-kyc",
+        element: <UploadKYC />,
+      },
     ],
   },
 ];

@@ -183,7 +183,7 @@ const NavBar = () => {
             style={{ top: visible ? 0 : '-100px', }}
         >
             <div className="brand-logo">
-                <p style={{ color: "rgb(72 72 72)" }} ><strong>EHB</strong> <br /> <span style={{ fontSize: "11px", color: "rgb(80 80 80)" }}>Franchise</span></p>
+                <p style={{ color: "rgb(173 173 173)" }} ><strong>Powered by EHB</strong></p>
             </div>
             {isAuthenticated ?
                 <div className="nav-menu d-flex align-items-center">
@@ -192,12 +192,12 @@ const NavBar = () => {
                         <>
                             {/* <Button className="rounded-buttons-nav" onClick={() => navigate('./home')}><img src={homeIcon} width={20} height={20} alt="" /></Button> */}
                             {/* <Button className="rounded-buttons-nav" onClick={() => navigate('./services')}><img src={services} width={20} height={20} alt="" /></Button> */}
-                            <Button className="rounded-buttons-nav" onClick={() => navigate('./chat')}><img src={chat} width={20} height={20} alt="" /><div className='sp-only-chat'>5</div></Button>
+                            {/* <Button className="rounded-buttons-nav" onClick={() => navigate('./chat')}><img src={chat} width={20} height={20} alt="" /><div className='sp-only-chat'>5</div></Button> */}
                             <Button className="rounded-buttons-nav" onClick={() => navigate('./cart')}><img src={notificationIcon} width={20} height={20} alt="" /><div className='sp-only-chat'>2</div></Button>
                             <div className="user-profile-wrapper">
                                 <Dropdown menu={{ items }} placement="bottomRight" arrow overlayClassName='pro-drp'>
                                     <div className="user-profile">
-                                        <div className="user-img-wrapper"><img src={userIcon} alt="" /></div>
+                                        <div className="user-img-wrapper"><img src="https://cdn.icon-icons.com/icons2/2630/PNG/512/avatar_man_beard_brown_hair_boy_people_icon_159121.png" alt="" /></div>
                                     </div>
                                 </Dropdown>
                             </div>
